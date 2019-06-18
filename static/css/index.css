@@ -1,11 +1,14 @@
 body{
     /*overflow: hidden;*/
 }
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
 /*背景图片*/
 .background{
     /*background: url(../images/index-images/background-image.png) no-repeat;*/
     height: auto;
-    min-height: 750px;
     width: 100%;
     position: absolute;
     left: 0px;
@@ -16,31 +19,45 @@ body{
 /*
 页面中间部分，公司信息以及项目介绍
  */
-.company-logo{
-    height: 50%;
-    max-height: 370px;
+.company{
     text-align: center;
-    margin-top: 2.5%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.company-logo{
+    width: 100%;
+    padding: 3.6% 0;
 }
 .company-logo img{
-    height: 90%;
-    width: auto;
-    max-height: 333px;
-    /* 这里实现了垂直居中 */
-    position: relative;
-    top: 50%;
-    /* 向上偏移自身50%的的高度 */
-    transform: translateY(-50%);
+    height: 28%;
+    max-height: 370px;
+    width: 28%;
+    max-width: 662px;
 }
 .project-msg{
-    margin-top: 2.5%;
-    text-align: center;
-    height: 50%;
-    max-height: 370px;
+    width: 100%;
 }
 .project-msg img{
-    height: 90%;
-    width: auto;
+    height: 18.19%;
+    max-height: 242px;
+    width: 19.28%;
+    max-width: 456px;
+    z-index: 1;
+}
+.video-ico{
+    width: 100%;
+    margin-top: 2%;
+}
+.video-ico img{
+    width: 4.4%;
+    max-width: 85px;
+    height: 2.4%;
+    max-height: 26px;
+    z-index: 1;
+}
+.video-ico:hover{
+    cursor:pointer;
 }
 
 /*底部导航栏*/
@@ -48,9 +65,9 @@ body{
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 20%;
-    width: 100%;
+    height: 18.24%;
     max-height: 197px;
+    width: 100%;
 }
 .footer-navigation img{
     width: 100%;
@@ -64,30 +81,41 @@ body{
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 20%;
-    width: 100%;
+    height: 18.24%;
     max-height: 197px;
+    width: 100%;
     text-align: center;
-    padding: 0 auto;
-
+    display: flex;
+    display: -webkit-flex;
+    align-items:center;
+    justify-content:center;
 }
-.footer-navigation-content .row{
+.footer-navigation-content-box{
     height: 100%;
+    width: 25%;
+    max-width: 480px;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    align-items:center;
+    justify-content:center;
+    /* 盒子模型，防止添加了边框后高度改变 */
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
 }
-.footer-navigation-content .col{
-    display: table;
-    height: 100%;
+.footer-navigation-content-box:hover{
+    /* 下面实现鼠标滑动效果 */
+    background: rgba(190, 15, 15, 0.4);
+    cursor:pointer;
+    border-bottom: 8px solid red;
 }
 .footer-navigation-content-group{
-    height: 100%;
+    height: auto;
+    width: 100%;
     /* 使用table-cell实现垂直居中 */
-    display: table-cell;
-    vertical-align: middle;
-}
-.footer-navigation-content .col:hover{
-    /* 下面实现鼠标滑动效果 */
-    background: #000000;
-    cursor:pointer;
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
 }
 .footer-navigation-content .footer-navigation-content-group img{
     width: auto;
@@ -95,6 +123,7 @@ body{
     max-height: 30px;
     z-index: 2;
 }
+
 .footer-navigation-content-word{
     color: #999999;
     margin-top: 10px;
@@ -103,12 +132,118 @@ body{
 /*
 右上方侧边栏
  */
-.right-sidebar{
+.right-sidebar-ico{
     position: fixed;
     right: 1.7%;
     top: 3%;
 }
-.right-sidebar img{
+.right-sidebar-ico img{
     height: auto;
     width: 75%;
+}
+
+/* 视频播放 */
+.video-group{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+}
+.video-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.video-close{
+    position: absolute;
+    top: 25%;
+    right: 25%;
+}
+.video-close img{
+    width: 34px;
+    height: 35px;
+}
+.video-close:hover{
+    cursor:pointer;
+}
+
+/* 页面右侧侧边栏 */
+.right-sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 32.81%;
+}
+.main-sidebar{
+    width: 52.54%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #232323;
+}
+.sidebar-close{
+    /*height: auto;*/
+    /*width: 10.3%;*/
+    /*position: absolute;*/
+    /*top: 2.78%;*/
+    /*right: 10%;*/
+    padding: 2.78% 9%;
+    text-align: right;
+}
+.sidebar-close img{
+    width: 10.3%;
+    height: auto;
+}
+.sidebar-close img:hover{
+    cursor:pointer;
+}
+.sidebar-logo{
+    padding-top: 30%;
+    padding-bottom: 20%;
+    width: 100%;
+    text-align: center;
+}
+.sidebar-logo img{
+    height: 4%;
+    width: 70%;
+}
+.main-sidebar-button{
+    width: 100%;
+    height: 7.4%;
+    color: #fff;
+    text-align: center;
+    background: #434343;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-sidebar-button:hover{
+    background: #232323;
+    cursor:pointer;
+}
+.secondary-sidebar{
+    width: 47.4%;
+    height: 100%;
+    background: rgba(35, 35, 35, 0.8);
+    color: #ffffff;
+}
+.secondary-button-group{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.secondary-button{
+    padding: 3.5% 0;
+}
+.secondary-button:hover{
+    text-decoration: underline;
 }

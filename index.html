@@ -3,55 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-    <link rel="stylesheet" href="./static/css/index.css">
 
-    <!-- 新 Bootstrap4 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
-    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
-    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- video.js -->
+    <link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
 </head>
 <body>
 
 <!-- 背景图片 -->
-<div class="row">
-    <div class="col-12">
+<div class="background-img">
         <img src="./static/images/index-images/background-image.png" class="background">
+</div>
+
+<!-- 页面中间文字部分内容 -->
+<div class="company">
+    <div class="company-logo">
+        <img src="./static/images/index-images/company-logo.png">
+    </div>
+    <div class="project-msg">
+        <img src="./static/images/index-images/project-msg.png">
+    </div>
+    <div class="video-ico" id="video-ico">
+        <img src="./static/images/index-images/videoico.png">
     </div>
 </div>
 
-<!-- 公司简介 -->
-<div class="company-logo">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col">
-            <img src="./static/images/index-images/company-logo.png">
-        </div>
-        <div class="col"></div>
-    </div>
-</div>
-<div class="company-msg">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col">
-        </div>
-        <div class="col"></div>
-    </div>
-</div>
-<div class="project-msg">
-    <div class="row">
-        <div class="col">
-            <img src="./static/images/index-images/project-msg.png">
-        </div>
-    </div>
-</div>
 
 <!-- 侧边栏 -->
-<div class="right-sidebar">
-    <img src="./static/images/index-images/right-sidebar.png">
+<div class="right-sidebar-ico" id="right-sidebar-ico">
+    <img src="./static/images/index-images/right-sidebar-ico.png">
 </div>
 
 <!-- 底部导航栏 -->
@@ -59,35 +42,171 @@
     <img src="./static/images/index-images/footer-image.png">
 </div>
 <div class="footer-navigation-content">
-    <div class="row">
-        <div class="col">
-            <div class="footer-navigation-content-group">
-                <img src="./static/images/index-images/project-background-ico.png">
-                <div class="footer-navigation-content-word">项目背景</div>
-            </div>
+    <div class="footer-navigation-content-box">
+        <div class="footer-navigation-content-group">
+            <img src="./static/images/index-images/project-background-ico.png">
+            <div class="footer-navigation-content-word">项目背景</div>
         </div>
-        <div class="col">
-            <div class="footer-navigation-content-group">
-                <img src="./static/images/index-images/strategy-ico.png">
-                <div class="footer-navigation-content-word">设计策略</div>
-            </div>
+    </div>
+
+    <div class="footer-navigation-content-box">
+        <div class="footer-navigation-content-group">
+            <img src="./static/images/index-images/strategy-ico.png" />
+            <div class="footer-navigation-content-word">设计策略</div>
         </div>
-        <div class="col">
-            <div class="footer-navigation-content-group">
-                <img src="./static/images/index-images/gain-ico.png">
-                <div class="footer-navigation-content-word">设计成果</div>
-            </div>
+    </div>
+
+    <div class="footer-navigation-content-box">
+        <div class="footer-navigation-content-group">
+            <img src="./static/images/index-images/gain-ico.png">
+            <div class="footer-navigation-content-word">设计成果</div>
         </div>
-        <div class="col">
-            <div class="footer-navigation-content-group">
-                <img src="./static/images/index-images/drawing-ico.png">
-                <div class="footer-navigation-content-word">产品图纸</div>
+    </div>
+
+    <div class="footer-navigation-content-box">
+        <div class="footer-navigation-content-group">
+            <img src="./static/images/index-images/drawing-ico.png">
+            <div class="footer-navigation-content-word">产品图纸</div>
+        </div>
+    </div>
+</div>
+
+<!-- 视频播放页面 -->
+<div class="video-group" id="video-group" style="display: none;">
+    <div class="video-box" id="video-box">
+        <video id="video-play" class="video-js vjs-big-play-centered" poster="./static/images/index-images/video-background.png">
+            <source src="./static/movies/Changsha%20Liuyang%20golf%20villa%20community-video.mp4">
+        </video>
+    </div>
+    <div class="video-close" id="video-close">
+        <img src="./static/images/index-images/closeico.png">
+    </div>
+</div>
+
+<!-- 右方侧边栏 -->
+<div class="right-sidebar" style="display: none;">
+    <div class="main-sidebar">
+        <div class="sidebar-close" id="sidebar-close">
+            <img src="./static/images/index-images/closeico.png">
+        </div>
+        <div class="sidebar-logo">
+            <img src="./static/images/index-images/right-sidebar-logo.png">
+        </div>
+        <div class="main-sidebar-button">
+            项目背景
+        </div>
+        <div class="main-sidebar-button">
+            设计策略
+        </div>
+        <div class="main-sidebar-button">
+            设计成果
+        </div>
+        <div class="main-sidebar-button">
+            产品图纸
+        </div>
+    </div>
+    <div class="secondary-sidebar">
+        <div class="secondary-button-group">
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    鸟瞰图
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    平台透视图
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    平台半鸟瞰图
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    整体鸟瞰图
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    规划总平面
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    指标表
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    B区放大总平面
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    分期规划
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    围合院落
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    土方节省
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    设计核心
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    户型分析
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    采光同风
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    回归生活
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    产品参数
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    功能分析图
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    土方节省
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    景观分析
+                </a>
+            </div>
+            <div class="secondary-button">
+                <a href="javascript:void(0)">
+                    土方节省
+                </a>
             </div>
         </div>
     </div>
 </div>
 
-
-<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" />
+<script src="./static/js/index.js"></script>
+<!-- video.js -->
 </body>
 </html>
