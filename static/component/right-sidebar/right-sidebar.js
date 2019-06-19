@@ -1,17 +1,17 @@
 // 文件路径
-let baseUrl = '/static/component/right-sidebar/'
+let baseUrl = '/FirstStaticWebProject/static/component/right-sidebar/'
 
 // 导航栏html
 let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
-    '    <img src="static/component/right-sidebar/images/homeico.png">\n' +
+    '    <img src="/FirstStaticWebProject/static/component/right-sidebar/images/homeico.png">\n' +
     '</div>\n' +
     '<div class="right-sidebar" style="display: none;">\n' +
     '    <div class="main-sidebar">\n' +
     '        <div class="sidebar-close" id="sidebar-close">\n' +
-    '            <img src="static/component/right-sidebar/images/closeico.png">\n' +
+    '            <img src="/FirstStaticWebProject/static/component/right-sidebar/images/closeico.png">\n' +
     '        </div>\n' +
     '        <div class="sidebar-logo">\n' +
-    '            <img src="static/component/right-sidebar/images/right-sidebar-logo.png">\n' +
+    '            <img src="/FirstStaticWebProject/static/component/right-sidebar/images/right-sidebar-logo.png">\n' +
     '        </div>\n' +
     '        <div class="main-sidebar-button">\n' +
     '            项目背景\n' +
@@ -136,7 +136,8 @@ css = $("head").children(":last");
 css.attr({
     rel: "stylesheet",
     type: "text/css",
-    href: "static/component/right-sidebar/css/right-sidebar.css",
+    // href: "/static/component/right-sidebar/css/right-sidebar.css",
+    href: "/FirstStaticWebProject/static/component/right-sidebar/css/right-sidebar.css",
 });
 
 // 侧边栏相关JS
