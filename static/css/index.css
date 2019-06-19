@@ -1,19 +1,11 @@
 body{
     /*overflow: hidden;*/
+    background: url(../images/index-images/background-image.png);
+    background-size:cover;
 }
 a{
     color: #ffffff;
     text-decoration: none;
-}
-/*背景图片*/
-.background{
-    /*background: url(../images/index-images/background-image.png) no-repeat;*/
-    height: auto;
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 0;
 }
 
 /*
@@ -27,34 +19,42 @@ a{
 }
 .company-logo{
     width: 100%;
-    padding: 3.6% 0;
+    padding: 0.552rem 0;
 }
 .company-logo img{
-    height: 28%;
-    max-height: 370px;
-    width: 28%;
-    max-width: 662px;
+    height: 2.96rem;
+    max-height: 296px;
+    width: 5.296rem;
+    max-width: 529px;
 }
 .project-msg{
     width: 100%;
 }
 .project-msg img{
-    height: 18.19%;
-    max-height: 242px;
-    width: 19.28%;
-    max-width: 456px;
+    height: 1.936rem;
+    max-height: 194px;
+    width: 3.648rem;
+    max-width: 365px;
     z-index: 1;
 }
 .video-ico{
     width: 100%;
-    margin-top: 2%;
+    height: auto;
+    text-align: center;
+    padding-top: 0.3rem;
 }
 .video-ico img{
-    width: 4.4%;
+    width: 0.85rem;
     max-width: 85px;
-    height: 2.4%;
+    height: 0.26rem;
     max-height: 26px;
     z-index: 1;
+    display:block;
+
+    /* 水平居中 */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .video-ico:hover{
     cursor:pointer;
@@ -65,8 +65,8 @@ a{
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 18.24%;
-    max-height: 197px;
+    height: 1.58rem;
+    max-height: 158px;
     width: 100%;
 }
 .footer-navigation img{
@@ -81,10 +81,11 @@ a{
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 18.24%;
-    max-height: 197px;
+    height: 1.58rem;
+    max-height: 158px;
     width: 100%;
     text-align: center;
+    font-size: 0.22rem;
     display: flex;
     display: -webkit-flex;
     align-items:center;
@@ -126,20 +127,7 @@ a{
 
 .footer-navigation-content-word{
     color: #999999;
-    margin-top: 10px;
-}
-
-/*
-右上方侧边栏
- */
-.right-sidebar-ico{
-    position: fixed;
-    right: 1.7%;
-    top: 3%;
-}
-.right-sidebar-ico img{
-    height: auto;
-    width: 75%;
+    margin-top: 0.18rem;
 }
 
 /* 视频播放 */
@@ -151,6 +139,7 @@ a{
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
     display: inline-block;
+    z-index: 4;
 }
 .video-box{
     position: absolute;
@@ -161,12 +150,12 @@ a{
 }
 .video-close{
     position: absolute;
-    top: 25%;
-    right: 25%;
+    top: 1.5rem;
+    right: 3rem;
 }
 .video-close img{
-    width: 34px;
-    height: 35px;
+    width: 0.34rem;
+    height: 0.35rem;
 }
 .video-close:hover{
     cursor:pointer;
