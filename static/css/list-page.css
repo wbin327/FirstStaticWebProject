@@ -25,6 +25,9 @@ header img{
     margin-right: 6.57rem;
     display: inline-block;
 }
+header img:hover{
+    cursor:pointer;
+}
 header .title{
     height: auto;
     width: 5rem;

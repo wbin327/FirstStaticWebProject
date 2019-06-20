@@ -91,7 +91,7 @@ a{
     align-items:center;
     justify-content:center;
 }
-.footer-navigation-content-box{
+.footer-navigation-content a{
     height: 100%;
     width: 25%;
     max-width: 480px;
@@ -105,7 +105,7 @@ a{
     -moz-box-sizing:border-box; /* Firefox */
     -webkit-box-sizing:border-box; /* Safari */
 }
-.footer-navigation-content-box:hover{
+.footer-navigation-content a:hover{
     /* 下面实现鼠标滑动效果 */
     background: rgba(190, 15, 15, 0.4);
     cursor:pointer;
