@@ -1,7 +1,3 @@
-// 文件路径
-let baseUrl = '/FirstStaticWebProject/'
-// let baseUrl = '/'
-
 // 格式化字符串
 String.prototype.format = function(args) {
     var result = this;

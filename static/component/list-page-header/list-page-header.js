@@ -1,8 +1,3 @@
-// 文件路径
-if(typeof baseUrl != "undefined"? true: false){
-    baseUrl = '/FirstStaticWebProject/'
-}
-// let baseUrl = '/'
 
 let header_html =
     '    <img src="{baseUrl}/static/component/list-page-header/images/return-ico.png">\n' +
