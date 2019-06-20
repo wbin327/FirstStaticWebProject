@@ -12,16 +12,8 @@
     <script src="../static/js/calculation-font-size.js"></script>
 </head>
 <body>
-<!-- 列表页头部 -->
-<header>
-    <img src="../static/images/list-page-images/return-ico.png">
-    <div class="title">
-        浏阳（长沙东）碧桂园高尔夫花园方案
-    </div>
-    <div class="subtitle">
-        设计成果
-    </div>
-</header>
+<!-- 列表页头部,通过JS自动填充 -->
+<header></header>
 
 <!-- 展示框 -->
 <div class="show-box-list">
@@ -77,9 +69,9 @@
 
 <!-- 分页 -->
 <div class="paging-group">
-    <div class="paging-box"><a href="./list-page-presentation1.html">1</a></div>
-    <div class="paging-box"><a href="./list-page-presentation2.html">2</a></div>
-    <div class="paging-box"><a href="./list-page-presentation3.html">3</a></div>
+    <div class="paging-box"><a href="./list-page-presentation1.html?subTitle=设计成果">1</a></div>
+    <div class="paging-box"><a href="./list-page-presentation2.html?subTitle=设计成果">2</a></div>
+    <div class="paging-box"><a href="./list-page-presentation3.html?subTitle=设计成果">3</a></div>
 </div>
 
 <!-- 侧边栏 -->
@@ -87,6 +79,8 @@
 
 <!-- 侧边栏JS，会自动往<div class="right-sidebar-component"></div>中填充内容 -->
 <script src="../static/component/right-sidebar/right-sidebar.js"></script>
+<!-- 页面header自动填充JS -->
+<script src="../static/component/list-page-header/list-page-header.js"></script>
 <script src="../static/js/list-page.js"></script>
 </body>
 </html>

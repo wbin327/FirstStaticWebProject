@@ -36,16 +36,16 @@ let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '            <img src="{baseUrl}/static/component/right-sidebar/images/right-sidebar-logo.png">\n' +
     '        </div>\n' +
 //    '        <div class="main-sidebar-button">\n' +
-    '            <a href="{baseUrl}/list-page/list-page-project.html" class="main-sidebar-button">项目背景</a>\n' +
+    '            <a href="{baseUrl}/list-page/list-page-project.html?subTitle=项目背景" class="main-sidebar-button">项目背景</a>\n' +
 //    '        </div>\n' +
 //     '        <div class="main-sidebar-button">\n' +
-    '            <a href="{baseUrl}/list-page/list-page-strategy.html" class="main-sidebar-button">设计策略</a>\n' +
+    '            <a href="{baseUrl}/list-page/list-page-strategy.html?subTitle=设计策略" class="main-sidebar-button">设计策略</a>\n' +
 //    '        </div>\n' +
 //    '        <div class="main-sidebar-button">\n' +
-    '            <a href="{baseUrl}/list-page/list-page-presentation1.html" class="main-sidebar-button">设计成果</a>\n' +
+    '            <a href="{baseUrl}/list-page/list-page-presentation1.html?subTitle=设计成果" class="main-sidebar-button">设计成果</a>\n' +
 //    '        </div>\n' +
 //    '        <div class="main-sidebar-button">\n' +
-    '            <a href="{baseUrl}/list-page/list-page-product1.html" class="main-sidebar-button">产品图纸</a>\n' +
+    '            <a href="{baseUrl}/list-page/list-page-product1.html?subTitle=产品图纸" class="main-sidebar-button">产品图纸</a>\n' +
 //    '        </div>\n' +
     '    </div>\n' +
     '    <div class="secondary-sidebar">\n' +
@@ -149,9 +149,9 @@ let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '    </div>\n' +
     '</div>';
 
-console.log("格式化前：" + sidebar_html);
+// console.log("格式化前：" + sidebar_html);
 sidebar_html = sidebar_html.format({'baseUrl': baseUrl});
-console.log("格式化后：" + sidebar_html);
+// console.log("格式化后：" + sidebar_html);
 
 // 为页面添加侧边栏,只需要在页面中声明<div class="right-sidebar" id="right-sidebar></div>,自动往该标签中添加元素
 $(".right-sidebar-component").html(sidebar_html);
