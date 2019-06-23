@@ -8,7 +8,8 @@ function getUrlPara(paraName){
         for(let i=0; i<arr_list.length; i++){
             arr = arr_list[i].split("=");
             if(arr != null && arr[0] == paraName){
-                return arr[1];
+                // 这里得进行URI解码，否则输出的是URI编码后的中文
+                return decodeURI(arr[1]);
             }
         }
     }

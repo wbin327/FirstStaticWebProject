@@ -8,27 +8,8 @@ let header_html =
     '        {subTitle}\n' +
     '    </div>'
 
-// 获取请求连接中携带的subTitle参数
-function getUrlPara(paraName){
-    let url = document.location.toString();
-    let arrObj = url.split("?");
-    if(arrObj.length > 1){
-        let arr_list = arrObj[1].split("&");
-        let arr;
-        for(let i=0; i<arr_list.length; i++){
-            arr = arr_list[i].split("=");
-            if(arr != null && arr[0] == paraName){
-                return arr[1];
-            }
-        }
-    }
-    else{
-        return "";
-    }
-}
-// 这里得进行URI解码，否则输出的是URI编码后的中文
-let subTitle = decodeURI(getUrlPara("subTitle"));
 
+let subTitle = getUrlPara("subTitle");
 // 格式化字符串
 String.prototype.format = function(args) {
     let result = this;
@@ -64,3 +45,10 @@ css.attr({
     href: "{baseUrl}/static/component/list-page-header/css/list-page-header.css".format({'baseUrl': baseUrl}),
 });
 
+// 点击返回按钮返回主页
+$("header img").click(function () {
+    //window.location.href = "/FirstStaticWebProject/";
+    // window.location.href = "/";
+    // 返回上一页
+    window.history.back();
+})

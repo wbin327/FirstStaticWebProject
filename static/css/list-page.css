@@ -2,7 +2,10 @@ body{
     background: url(../images/list-page-images/background.jpg);
     background-size:cover;
 }
-
+a{
+    display: inline-block;
+    text-decoration:none;
+}
 /*
 页面中间部分展示框
  */

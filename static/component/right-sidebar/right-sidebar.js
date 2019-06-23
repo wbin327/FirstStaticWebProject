@@ -47,98 +47,88 @@ let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '    <div class="secondary-sidebar">\n' +
     '        <div class="secondary-button-group">\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=0">\n' +
     '                    鸟瞰图\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=1">\n' +
     '                    平台透视图\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=1">\n' +
     '                    平台半鸟瞰图\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=3">\n' +
     '                    整体鸟瞰图\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=4">\n' +
     '                    规划总平面\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=6">\n' +
     '                    指标表\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=7">\n' +
     '                    B区放大总平面\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=8">\n' +
     '                    分期规划\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=9">\n' +
     '                    围合院落\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=10">\n' +
     '                    土方节省\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=11">\n' +
     '                    设计核心\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=12">\n' +
     '                    户型分析\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=13">\n' +
     '                    采光同风\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=14">\n' +
     '                    回归生活\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=18">\n' +
     '                    产品参数\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=19">\n' +
     '                    功能分析图\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
-    '                    土方节省\n' +
-    '                </a>\n' +
-    '            </div>\n' +
-    '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=20">\n' +
     '                    景观分析\n' +
-    '                </a>\n' +
-    '            </div>\n' +
-    '            <div class="secondary-button">\n' +
-    '                <a href="javascript:void(0)">\n' +
-    '                    土方节省\n' +
     '                </a>\n' +
     '            </div>\n' +
     '        </div>\n' +

@@ -1,6 +1,6 @@
 // 视频播放相关JS
 let options = {
-    autoplay: true,
+    autoplay: false,
     controls: true,
     loop: true,
     preload: 'auto',
