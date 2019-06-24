@@ -1,3 +1,8 @@
+// 给图片添加放大镜
+$(document).ready(function () {
+    $(".main img").blowup({width:300, height:300});
+})
+
 // 页面需要用到的全局变量
 let arr_list = ['left', 'main', 'right'];
 let project_folder = '/project-images/';
@@ -18,7 +23,7 @@ let presentation_images_list = ['aerial-view.png', 'perspective.png', 'binary-ae
 // 设置页面需要展示的图片集合
 let file_list = [];
 let subTitle1 = getUrlPara('subTitle');
-console.log(subTitle1);
+//console.log(subTitle1);
 if(subTitle1 == "项目背景"){
     $.each(project_images_list, function (index, value) {
         project_images_list[index] = project_folder + value;
@@ -58,68 +63,80 @@ addImages();
 function addImages(){
     if(file_list.length != 0){
         if(image_index == 0){
-            // 隐藏左按钮
+            // 隐藏左按钮以及最左边图片
             $(".left-button").hide();
-            removeAllImageFromLi();
+            $(".left").hide();
+            // removeAllImageFromLi();
             // 给第二个li添加图片
-            let path = '<img src={details_page_images_path}{image_path}>'
-                .format({'details_page_images_path': details_page_images_path, 'image_path': file_list[image_index]});
-            addImageToLi(2, path);
+            let path = details_page_images_path + file_list[image_index];
+            editImageSrc(2, path);
             // 如果数组不越界,就给第三个li添加图片
             if(file_list[image_index+1] != undefined){
-                let path = '<img src={details_page_images_path}{image_path}>'
-                    .format({'details_page_images_path': details_page_images_path, 'image_path': file_list[image_index + 1]});
-                addImageToLi(3, path);
+                let path = details_page_images_path + file_list[image_index + 1];
+                editImageSrc(3, path);
             }else{
-                // 隐藏右按钮
+                // 隐藏右按钮以及最右边图片
                 $(".right-button").hide();
+                $(".right").hide();
             }
         }else if (image_index == file_list.length - 1){
-            // 隐藏右按钮
+            // 隐藏右按钮以及最右边图片
             $(".right-button").hide();
-            removeAllImageFromLi();
+            $(".right").hide();
+            // removeAllImageFromLi();
             // 如果数组不越界,给第一个li添加图片
             if(file_list[image_index-1] != undefined){
-                let path = '<img src={details_page_images_path}{image_path}>'
-                    .format({'details_page_images_path': details_page_images_path, 'image_path': file_list[image_index - 1]});
-                addImageToLi(1, path);
+                let path = details_page_images_path + file_list[image_index - 1];
+                editImageSrc(1, path);
             }else{
-                // 隐藏左按钮
+                // 隐藏左按钮以及最左边图片
                 $(".left-button").hide();
+                $(".left").hide();
             }
             // 给第二个li添加图片
-            let path = '<img src={details_page_images_path}{image_path}>'
-                .format({'details_page_images_path': details_page_images_path, 'image_path': file_list[image_index]});
-            addImageToLi(2, path);
+            let path = details_page_images_path + file_list[image_index];
+            editImageSrc(2, path);
         }else{
             // 显示左右按钮
             $(".left-button").show();
             $(".right-button").show();
-            removeAllImageFromLi();
-            let left_image_path='<img src={details_page_images_path}{image_path}>'
-                .format({'details_page_images_path': details_page_images_path, 'image_path': file_list[image_index-1]});
-            let main_image_path = '<img src={details_page_images_path}{image_path}>'
-                .format({'details_page_images_path': details_page_images_path, 'image_path': file_list[image_index]});
-            let right_image_path = '<img src={details_page_images_path}{image_path}>'
-                .format({'details_page_images_path': details_page_images_path, 'image_path': file_list[image_index+1]});
-            addImageToLi(1, left_image_path);
-            addImageToLi(2, main_image_path);
-            addImageToLi(3, right_image_path);
+            $(".left").show();
+            $(".right").show();
+            //removeAllImageFromLi();
+            let left_image_path= details_page_images_path + file_list[image_index-1];
+            let main_image_path = details_page_images_path + file_list[image_index];
+            let right_image_path = details_page_images_path + file_list[image_index+1];
+            editImageSrc(1, left_image_path);
+            editImageSrc(2, main_image_path);
+            editImageSrc(3, right_image_path);
         }
+    }
+}
+function editImageSrc(whichLi, image_path) {
+    switch(whichLi){
+        case 1:
+            $(".left img").attr('src', image_path);
+            break;
+        case 2:
+            $(".main img").attr('src', image_path);
+            break;
+        case 3:
+            $(".right img").attr('src', image_path);
+            break;
     }
 }
 function addImageToLi(whichLi, image_path){
     switch(whichLi){
         case 1:
-            console.log("append1：" + image_path);
+
             $(".display-box li:first-child").append(image_path);
             break;
         case 2:
-            console.log("append2"+ image_path);
+
             $(".display-box li:nth-child(2)").append(image_path);
             break;
         case 3:
-            console.log("append3"+ image_path);
+
             $(".display-box li:nth-child(3)").append(image_path);
             break;
     }
@@ -152,17 +169,25 @@ function removeImageFromLi(whichLi){
 $(".left-button").on('click', function () {
     $(".left-button").css("background", "rgba(23,23,23,0.7)");
     image_index --;
+    // 点击按钮后修改图片
     addImages();
+    // 重新绑定放大镜
+    $(".main img").blowup({width:300, height:300});
     setTimeout(function () {
         $(".left-button").css("background", "rgba(23,23,23,0.2)");
         //$(".display-content img").css("transform", "scale(0.8)")
     }, 500)
+
 })
 $(".right-button").on('click', function () {
     $(".right-button").css("background", "rgba(23,23,23,0.7)");
     image_index ++;
+    // 添加图片
     addImages();
+    // 重新绑定放大镜
+    $(".main img").blowup({width:300, height:300});
     setTimeout(function () {
         $(".right-button").css("background", "rgba(23,23,23,0.2)");
     }, 500)
 })
+

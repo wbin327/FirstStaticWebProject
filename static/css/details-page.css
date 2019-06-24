@@ -82,7 +82,7 @@ header .subtitle{
 .right-button img{
     height: 0.63rem;
     width: 0.63rem;
-    z-index: 2;
+
 
     /* 盒子模型，防止超出原本设置的大小 */
     display: block;
@@ -122,13 +122,13 @@ header .subtitle{
 .main{
     /* translated3d()相对于原位置进行一个位移，scale()相对于原本的大小进行缩放0-1 */
     transform: translate3d(0, 0, 0) scale(1);
-    z-index: 1;
+
 }
 .left{
     transform: translate3d(-9.98rem, 0, 0) scale(0.9);
-    z-index: 1;
+
 }
 .right{
     transform: translate3d(9.98rem, 0, 0) scale(0.9);
-    z-index: 1;
+
 }

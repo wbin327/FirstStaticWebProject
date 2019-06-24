@@ -23,3 +23,16 @@ $("#sidebar-close img").click(function () {
 $("#right-sidebar-ico").click(function () {
     $(".right-sidebar").fadeIn();
 })
+// $("body").hover(function () {
+//     // 放大1.3
+//     $("body").css({
+//         'transform': 'translate(0, 0) scale(1.5)',
+//         'transition': 'all 1s ease'
+//     });
+//     setTimeout(function () {
+//         $("body").css({
+//             'transform': 'translate(0, 0) scale(1)',
+//             'transition': 'all 1s ease'
+//         });
+//     }, 1)
+// })

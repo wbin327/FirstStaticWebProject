@@ -1,51 +1,36 @@
-// 格式化字符串
-String.prototype.format = function(args) {
-    var result = this;
-    if (arguments.length < 1) {
-        return result;
-    }
-    var data = arguments;
-    if (arguments.length == 1 && typeof (args) == "object") {
-        data = args;
-    }
-    for (var key in data) {
-        var value = data[key];
-        if (undefined != value) {
-            // result = result.replace("{" + key + "}", value);
-            // 替换字符串中匹配到的所有字符
-            result = result.replace(new RegExp("{" + key + "}", 'g'), value);
-        }
-    }
-    return result;
-}
-
-// 导航栏html
-let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
-    '    <img src="{baseUrl}/static/component/right-sidebar/images/homeico.png">\n' +
-    '</div>\n' +
-    '<div class="right-sidebar" style="display: none;">\n' +
-    '    <div class="main-sidebar">\n' +
-    '        <div class="sidebar-close" id="sidebar-close">\n' +
-    '            <img src="{baseUrl}/static/component/right-sidebar/images/closeico.png">\n' +
-    '        </div>\n' +
-    '        <div class="sidebar-logo">\n' +
-    '            <img src="{baseUrl}/static/component/right-sidebar/images/right-sidebar-logo.png">\n' +
-    '        </div>\n' +
-//    '        <div class="main-sidebar-button">\n' +
-    '            <a href="{baseUrl}/list-page/list-page-project.html?subTitle=项目背景" class="main-sidebar-button">项目背景</a>\n' +
-//    '        </div>\n' +
-//     '        <div class="main-sidebar-button">\n' +
-    '            <a href="{baseUrl}/list-page/list-page-strategy.html?subTitle=设计策略" class="main-sidebar-button">设计策略</a>\n' +
-//    '        </div>\n' +
-//    '        <div class="main-sidebar-button">\n' +
-    '            <a href="{baseUrl}/list-page/list-page-presentation1.html?subTitle=设计成果" class="main-sidebar-button">设计成果</a>\n' +
-//    '        </div>\n' +
-//    '        <div class="main-sidebar-button">\n' +
-    '            <a href="{baseUrl}/list-page/list-page-product1.html?subTitle=产品图纸" class="main-sidebar-button">产品图纸</a>\n' +
-//    '        </div>\n' +
-    '    </div>\n' +
-    '    <div class="secondary-sidebar">\n' +
-    '        <div class="secondary-button-group">\n' +
+let secondary_sidebar_project =
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=项目背景&image_index=0">\n' +
+    '                    项目背景\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=项目背景&image_index=1">\n' +
+    '                    区位分析\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=项目背景&image_index=2">\n' +
+    '                    周边现状\n' +
+    '                </a>\n' +
+    '            </div>';
+let secondary_sidebar_strategy =
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计策略&image_index=0">\n' +
+    '                    高尔夫精神\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计策略&image_index=1">\n' +
+    '                    绿色家园（多）\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计策略&image_index=3">\n' +
+    '                    生态修复\n' +
+    '                </a>\n' +
+    '            </div>'.format({'baseUrl': baseUrl});
+let secondary_sidebar_presentation =
     '            <div class="secondary-button">\n' +
     '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=0">\n' +
     '                    鸟瞰图\n' +
@@ -57,7 +42,7 @@ let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
-    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=1">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=2">\n' +
     '                    平台半鸟瞰图\n' +
     '                </a>\n' +
     '            </div>\n' +
@@ -68,7 +53,7 @@ let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
     '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=4">\n' +
-    '                    规划总平面\n' +
+    '                    规划总平面（多）\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
@@ -113,7 +98,7 @@ let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
     '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=14">\n' +
-    '                    回归生活\n' +
+    '                    回归生活（多）\n' +
     '                </a>\n' +
     '            </div>\n' +
     '            <div class="secondary-button">\n' +
@@ -130,14 +115,84 @@ let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '                <a href="{baseUrl}/details-page/details-page.html?subTitle=设计成果&image_index=20">\n' +
     '                    景观分析\n' +
     '                </a>\n' +
+    '            </div>'.format({'baseUrl': baseUrl});
+let secondary_sidebar_product =
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=0">\n' +
+    '                    别墅共性优点\n' +
+    '                </a>\n' +
     '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=1">\n' +
+    '                    独栋A型\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=2">\n' +
+    '                    独栋B型（多）\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=4">\n' +
+    '                    独栋C型（多）\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=6">\n' +
+    '                    独栋别墅优点\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=7">\n' +
+    '                    叠拼别墅（多）\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=11">\n' +
+    '                    叠拼别墅优点\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=12">\n' +
+    '                    联排别墅（多）\n' +
+    '                </a>\n' +
+    '            </div>\n' +
+    '            <div class="secondary-button">\n' +
+    '                <a href="{baseUrl}/details-page/details-page.html?subTitle=产品图纸&image_index=17">\n' +
+    '                    联排别墅优点\n' +
+    '                </a>\n' +
+    '            </div>'.format({'baseUrl': baseUrl});
+
+// 格式化字符串
+secondary_sidebar_product = secondary_sidebar_product.format({'baseUrl': baseUrl});
+secondary_sidebar_presentation = secondary_sidebar_presentation.format({'baseUrl': baseUrl});
+secondary_sidebar_strategy = secondary_sidebar_strategy.format({'baseUrl': baseUrl});
+secondary_sidebar_project = secondary_sidebar_project.format({'baseUrl': baseUrl});
+
+// 导航栏html
+let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
+    '    <img src="{baseUrl}/static/component/right-sidebar/images/homeico.png">\n' +
+    '</div>\n' +
+    '<div class="right-sidebar" style="display: none;">\n' +
+    '    <div class="main-sidebar">\n' +
+    '        <div class="sidebar-close" id="sidebar-close">\n' +
+    '            <img src="{baseUrl}/static/component/right-sidebar/images/closeico.png">\n' +
+    '        </div>\n' +
+    '        <div class="sidebar-logo">\n' +
+    '            <img src="{baseUrl}/static/component/right-sidebar/images/right-sidebar-logo.png">\n' +
+    '        </div>\n' +
+    '            <a href="{baseUrl}/list-page/list-page-project.html?subTitle=项目背景" class="main-sidebar-button">项目背景</a>\n' +
+    '            <a href="{baseUrl}/list-page/list-page-strategy.html?subTitle=设计策略" class="main-sidebar-button">设计策略</a>\n' +
+    '            <a href="{baseUrl}/list-page/list-page-presentation1.html?subTitle=设计成果" class="main-sidebar-button">设计成果</a>\n' +
+    '            <a href="{baseUrl}/list-page/list-page-product1.html?subTitle=产品图纸" class="main-sidebar-button">产品图纸</a>\n' +
+    '    </div>\n' +
+    '    <div class="secondary-sidebar">\n' +
+    '        <div class="secondary-button-group">\n' +
     '        </div>\n' +
     '    </div>\n' +
     '</div>';
 
-// console.log("格式化前：" + sidebar_html);
 sidebar_html = sidebar_html.format({'baseUrl': baseUrl});
-// console.log("格式化后：" + sidebar_html);
 
 // 为页面添加侧边栏,只需要在页面中声明<div class="right-sidebar" id="right-sidebar></div>,自动往该标签中添加元素
 $(".right-sidebar-component").html(sidebar_html);
@@ -158,4 +213,26 @@ $("#sidebar-close img").click(function () {
 })
 $("#right-sidebar-ico").click(function () {
     $(".right-sidebar").fadeIn();
+})
+
+// 鼠标滑过时显示相应的导航栏
+$(".main-sidebar a:eq(0)").hover(function () {
+    // 删除所有子元素
+    $('.secondary-button-group').empty();
+    $('.secondary-button-group').append(secondary_sidebar_project);
+})
+$(".main-sidebar a:eq(1)").hover(function () {
+    // 删除所有子元素
+    $('.secondary-button-group').empty();
+    $('.secondary-button-group').append(secondary_sidebar_strategy);
+})
+$(".main-sidebar a:eq(2)").hover(function () {
+    // 删除所有子元素
+    $('.secondary-button-group').empty();
+    $('.secondary-button-group').append(secondary_sidebar_presentation);
+})
+$(".main-sidebar a:eq(3)").hover(function () {
+    // 删除所有子元素
+    $('.secondary-button-group').empty();
+    $('.secondary-button-group').append(secondary_sidebar_product);
 })
