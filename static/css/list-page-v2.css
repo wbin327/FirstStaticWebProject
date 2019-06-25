@@ -1,0 +1,94 @@
+body{
+    background: url(../images/list-page-images/background.jpg);
+    background-size:cover;
+}
+
+.display-content{
+    width: 100%;
+    height: 7.582rem;
+    position: relative;
+    top: 0.5rem;
+    /*padding: 0.5rem;*/
+    box-sizing:border-box;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+}
+.display-content div{
+    display: inline-block;
+}
+
+.main-box{
+    /*margin-right: 0.73rem;*/
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    width: 11.06rem;
+    height: 7.582rem;
+    position: absolute;
+    left: 1.3rem;
+    top: 0;
+}
+.main-box img{
+    width: 11.06rem;
+    height: 7.582rem;
+}
+/*
+大图悬停幕布
+ */
+.black-screen{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 11.06rem;
+    height: 1.5rem;
+    background: rgba(0,0,0, 0.5);
+    font-size: 0.18rem;
+}
+.black-screen .image-title{
+    border-left: red 0.03rem solid;
+    padding-left: 0.1rem;
+    margin-left: 0.5rem;
+    margin-top: 0.66rem;
+}
+.black-screen .image-ico img{
+    width: 0.43rem;
+    height: 0.18rem;
+    padding-left: 8.5rem;
+}
+.sub-box-group{
+    height: 7.582rem;
+    width: 4.56rem;
+    position: absolute;
+    right: 1.6rem;
+    overflow:auto;
+}
+.sub-box{
+    padding-bottom: 0.1rem;
+}
+.sub-box img{
+    height: 2.84rem;
+    width: 4.14rem;
+}
+
+/*
+滚动条
+ */
+.sub-box-group::-webkit-scrollbar{
+    width: 0.09rem;
+    background-color: #232323;
+    border-radius: 0.1rem;
+}
+/* 滚动条小方块 */
+.sub-box-group::-webkit-scrollbar-thumb{
+
+    border-radius: 0.1rem;
+    background-color: #ffffff;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    /*width: 0.5rem;*/
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 0.1rem;
+    background-color: #232323;
+}

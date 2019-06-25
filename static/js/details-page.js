@@ -48,7 +48,7 @@ if(subTitle1 == "产品图纸"){
     });
     file_list = product_images_list;
 }
-console.log(file_list);
+// console.log(file_list);
 
 // 获取到get请求中image_index
 let image_index = parseInt(getUrlPara("image_index"));
