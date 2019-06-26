@@ -39,8 +39,9 @@ body{
  */
 .black-screen{
     position: absolute;
-    bottom: 0;
-    width: 11.06rem;
+    left: 0.3rem;
+    bottom: 0.3rem;
+    width: 10.4rem;
     height: 1.5rem;
     background: rgba(0,0,0, 0.5);
     font-size: 0.18rem;
@@ -49,17 +50,22 @@ body{
 .black-screen .image-title{
     border-left: red 0.03rem solid;
     padding-left: 0.1rem;
-    margin-left: 0.5rem;
-    margin-top: 0.66rem;
     display: inline-block;
+    position: relative;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .black-screen .image-ico{
     display: inline-block;
+    position: relative;
+    left: 8.7rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .black-screen .image-ico img{
     width: 0.43rem;
     height: 0.18rem;
-    padding-left: 8.5rem;
 }
 .sub-box-group{
     height: 7.582rem;
@@ -79,30 +85,32 @@ body{
     width: 4.14rem;
 }
 .sub-black-screen{
-    width: 4.14rem;
-    height: 0.57rem;
-    background: rgba(0,0,0, 0.5);
-    font-size: 0.144rem;
+    width: 3.8rem;
+    height: 0.7rem;
+    background: rgba(0,0,0,0.5);
+    font-size: 0.18rem;
     color: #ffffff;
-    transform: translateY(-98%);
+    transform: translate(5%, -120%);
 }
 .sub-black-screen .sub-image-title{
     display: inline-block;
     position: relative;
     top: 50%;
-    left: 0.5rem;
+    left: 0.3rem;
     transform: translateY(-50%);
+    border-left: red 0.03rem solid;
+    padding-left: 0.1rem;
 }
 .sub-black-screen .sub-image-ico{
     display: inline-block;
     position: relative;
     top: 50%;
-    left: 2.71rem;
+    left: 2.3rem;
     transform: translateY(-50%);
 }
 .sub-black-screen .sub-image-ico img{
-    width: 0.344rem;
-    height: 0.144rem;
+    width: 0.43rem;
+    height: 0.18rem;
 }
 
 /*
