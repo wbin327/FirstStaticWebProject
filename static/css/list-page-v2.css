@@ -13,9 +13,6 @@ body{
     padding-left: 1.3rem;
     padding-right: 1.3rem;
 }
-.display-content div{
-    display: inline-block;
-}
 
 .main-box{
     /*margin-right: 0.73rem;*/
@@ -27,28 +24,37 @@ body{
     position: absolute;
     left: 1.3rem;
     top: 0;
+    display: inline-block;
 }
 .main-box img{
     width: 11.06rem;
     height: 7.582rem;
 }
+.main-box:hover .black-screen{
+    visibility: hidden;
+    /*display: block;*/
+}
 /*
 大图悬停幕布
  */
 .black-screen{
-    display: none;
     position: absolute;
     bottom: 0;
     width: 11.06rem;
     height: 1.5rem;
     background: rgba(0,0,0, 0.5);
     font-size: 0.18rem;
+    color: #ffffff;
 }
 .black-screen .image-title{
     border-left: red 0.03rem solid;
     padding-left: 0.1rem;
     margin-left: 0.5rem;
     margin-top: 0.66rem;
+    display: inline-block;
+}
+.black-screen .image-ico{
+    display: inline-block;
 }
 .black-screen .image-ico img{
     width: 0.43rem;
@@ -63,11 +69,40 @@ body{
     overflow:auto;
 }
 .sub-box{
-    padding-bottom: 0.1rem;
+    display: inline-block;
+    font-size: 0;
+    height: 2.85rem;
+    width: 4.14rem;
 }
 .sub-box img{
     height: 2.84rem;
     width: 4.14rem;
+}
+.sub-black-screen{
+    width: 4.14rem;
+    height: 0.57rem;
+    background: rgba(0,0,0, 0.5);
+    font-size: 0.144rem;
+    color: #ffffff;
+    transform: translateY(-98%);
+}
+.sub-black-screen .sub-image-title{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+}
+.sub-black-screen .sub-image-ico{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 2.71rem;
+    transform: translateY(-50%);
+}
+.sub-black-screen .sub-image-ico img{
+    width: 0.344rem;
+    height: 0.144rem;
 }
 
 /*
