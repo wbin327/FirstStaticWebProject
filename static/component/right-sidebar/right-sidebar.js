@@ -170,7 +170,8 @@ secondary_sidebar_strategy = secondary_sidebar_strategy.format({'baseUrl': baseU
 secondary_sidebar_project = secondary_sidebar_project.format({'baseUrl': baseUrl});
 
 // 导航栏html
-let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
+let sidebar_html =
+    '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '    <img src="{baseUrl}/static/component/right-sidebar/images/homeico.png">\n' +
     '</div>\n' +
     '<div class="right-sidebar" style="display: none;">\n' +
@@ -255,8 +256,9 @@ $(".main-sidebar a:eq(3)").hover(function () {
     // 删除所有子元素
     $('.secondary-button-group').empty();
     $('.secondary-button-group').append(secondary_sidebar_product);
-},
+    },
     function () {
         // 离开时隐藏
         $('.secondary-sidebar').hide();
-    })
+    }
+    )
