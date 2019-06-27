@@ -186,7 +186,7 @@ let sidebar_html = '<div class="right-sidebar-ico" id="right-sidebar-ico">\n' +
     '            <a href="{baseUrl}/list-page/list-page-presentation1.html?subTitle=设计成果" class="main-sidebar-button">设计成果</a>\n' +
     '            <a href="{baseUrl}/list-page/list-page-product1.html?subTitle=产品图纸" class="main-sidebar-button">产品图纸</a>\n' +
     '    </div>\n' +
-    '    <div class="secondary-sidebar">\n' +
+    '    <div class="secondary-sidebar" style="display: none;">\n' +
     '        <div class="secondary-button-group">\n' +
     '        </div>\n' +
     '    </div>\n' +
@@ -217,22 +217,46 @@ $("#right-sidebar-ico").click(function () {
 
 // 鼠标滑过时显示相应的导航栏
 $(".main-sidebar a:eq(0)").hover(function () {
+    // 显示子导航栏
+    $('.secondary-sidebar').show();
     // 删除所有子元素
     $('.secondary-button-group').empty();
     $('.secondary-button-group').append(secondary_sidebar_project);
-})
+},
+    function () {
+        // 离开时隐藏
+        $('.secondary-sidebar').hide();
+    })
 $(".main-sidebar a:eq(1)").hover(function () {
+    // 显示子导航栏
+    $('.secondary-sidebar').show();
     // 删除所有子元素
     $('.secondary-button-group').empty();
     $('.secondary-button-group').append(secondary_sidebar_strategy);
-})
+},
+    function () {
+        // 离开时隐藏
+        $('.secondary-sidebar').hide();
+    })
 $(".main-sidebar a:eq(2)").hover(function () {
+    // 显示子导航栏
+    $('.secondary-sidebar').show();
     // 删除所有子元素
     $('.secondary-button-group').empty();
     $('.secondary-button-group').append(secondary_sidebar_presentation);
-})
+},
+    function () {
+        // 离开时隐藏
+        $('.secondary-sidebar').hide();
+    })
 $(".main-sidebar a:eq(3)").hover(function () {
+    // 显示子导航栏
+    $('.secondary-sidebar').show();
     // 删除所有子元素
     $('.secondary-button-group').empty();
     $('.secondary-button-group').append(secondary_sidebar_product);
-})
+},
+    function () {
+        // 离开时隐藏
+        $('.secondary-sidebar').hide();
+    })
