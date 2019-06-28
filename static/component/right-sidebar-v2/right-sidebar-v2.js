@@ -13,7 +13,7 @@ let data = `
                 "link": "{baseUrl}/details-page/details-page.html?subTitle=项目背景&image_index=1"
             },
             {
-                "name": "项目背景",
+                "name": "周边现状",
                 "link": "{baseUrl}/details-page/details-page.html?subTitle=项目背景&image_index=2"
             }
         ]
@@ -210,7 +210,7 @@ css.attr({
     rel: "stylesheet",
     type: "text/css",
     // href: "/static/component/right-sidebar/css/right-sidebar.css",
-    href: "{baseUrl}/static/component/right-sidebar/css/right-sidebar.css".format({'baseUrl': baseUrl}),
+    href: "{baseUrl}/static/component/right-sidebar-v2/css/right-sidebar.css".format({'baseUrl': baseUrl}),
 });
 
 // 侧边栏相关JS
@@ -242,6 +242,7 @@ $(".main-sidebar a").hover(function (e) {
                 let html = doT.template(secondary_sidebar)(data[i].subType);
                 // console.log(html);
                 // 删除添加子元素
+                $('.secondary-button-group').empty();
                 $('.secondary-button-group').append(html);
             }
         }

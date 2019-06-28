@@ -10,8 +10,8 @@
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <!-- 计算body字体大小，在宽度为1920的环境下，字体大小为100px -->
     <script src="../static/js/calculation-font-size.js"></script>
-    <!-- 引入template.js -->
-    <script src="../static/js/art-template.js"></script>
+    <!-- 引入前端模板渲染template.js -->
+    <script src="../static/js/doT.js"></script>
 </head>
 <body>
 <!-- 列表页头部,通过JS自动填充 -->
@@ -33,35 +33,34 @@
 
     <!-- 小图 -->
     <div class="sub-box-group">
-        <div class="sub-box">
-            <img src="../static/images/details-page-images/presentation-images/aerial-view.png" alt="鸟瞰图2">
-            <!-- 幕布 -->
-            <div class="sub-black-screen" style="visibility: hidden">
-                <div class="sub-image-title">鸟瞰图2</div>
-                <div class="sub-image-ico">
-                    <img src="../static/images/list-page-images/arrowIco.png">
-                </div>
-            </div>
-        </div>
-        <div class="sub-box">
-            <img src="../static/images/details-page-images/presentation-images/aerial-view.png">
-            <div class="sub-black-screen" style="visibility: hidden">
-                <div class="sub-image-title">鸟瞰图3</div>
-                <div class="sub-image-ico">
-                    <img src="../static/images/list-page-images/arrowIco.png">
-                </div>
-            </div>
-        </div>
-        <div class="sub-box">
-            <img src="../static/images/details-page-images/presentation-images/aerial-view.png">
-            <div class="sub-black-screen" style="visibility: hidden">
-                <div class="sub-image-title">鸟瞰图4</div>
-                <div class="sub-image-ico">
-                    <img src="../static/images/list-page-images/arrowIco.png">
-                </div>
-            </div>
-        </div>
+<!--        <div class="sub-box">-->
+<!--            <img src="../static/images/details-page-images/presentation-images/aerial-view.png" alt="鸟瞰图2">-->
+<!--            &lt;!&ndash; 幕布 &ndash;&gt;-->
+<!--            <div class="sub-black-screen" style="visibility: hidden">-->
+<!--                <div class="sub-image-title">鸟瞰图2</div>-->
+<!--                <div class="sub-image-ico">-->
+<!--                    <img src="../static/images/list-page-images/arrowIco.png">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
+
+    <!-- 模板渲染 -->
+    <script type="text/x-dot-template" id="sub-box">
+            {{~it:item:index}}
+            <div class="sub-box">
+                <img src="{{=item.image_path}}" alt="{{=item.name}}">
+                <!-- 幕布 -->
+                <div class="sub-black-screen" style="visibility: hidden">
+                    <div class="sub-image-title">{{=item.name}}</div>
+                    <div class="sub-image-ico">
+                        <img src="../static/images/list-page-images/arrowIco.png">
+                    </div>
+                </div>
+            </div>
+            {{~}}
+    </script>
+
 </div>
 
 <!-- 侧边栏 -->
