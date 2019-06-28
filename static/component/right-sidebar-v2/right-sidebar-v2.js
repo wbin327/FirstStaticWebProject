@@ -154,6 +154,7 @@ let data = `
     }
 ]
 `
+// debugger;
 
 // 格式化字符串
 // secondary_sidebar_product = secondary_sidebar_product.format({'baseUrl': baseUrl});
@@ -161,7 +162,7 @@ let data = `
 // secondary_sidebar_strategy = secondary_sidebar_strategy.format({'baseUrl': baseUrl});
 // secondary_sidebar_project = secondary_sidebar_project.format({'baseUrl': baseUrl});
 data = data.format({'baseUrl': baseUrl});
-// data = JSON.parse(data);
+data = JSON.parse(data);
 // console.log(data);
 
 // 导航栏html
@@ -177,9 +178,9 @@ let sidebar_html = `
         <div class="sidebar-logo">
             <img src="{baseUrl}/static/component/right-sidebar/images/right-sidebar-logo.png">
         </div>
-        <% for(let i = 0; i < data.length; i++){ %>
-            <a href="<%= data[i].link %>" class="main-sidebar-button"><%= data[i].name %></a>
-         <% } %>
+        {{~it:value:index}}
+        <a href="{{=value.link}}" class="main-sidebar-button">{{=value.name}}</a>
+        {{~}}
     </div>
     <div class="secondary-sidebar" style="display: none;">
         <div class="secondary-button-group"></div>
@@ -195,8 +196,9 @@ let sidebar_html = `
 // {{/each}}
 
 sidebar_html = sidebar_html.format({'baseUrl': baseUrl});
-sidebar_html = template.render(sidebar_html, {data: data});
-console.log(sidebar_html);
+// 内容渲染
+sidebar_html =  doT.template(sidebar_html)(data);
+// console.log(sidebar_html);
 
 // 为页面添加侧边栏,只需要在页面中声明<div class="right-sidebar" id="right-sidebar></div>,自动往该标签中添加元素
 $(".right-sidebar-component").html(sidebar_html);
@@ -214,62 +216,42 @@ css.attr({
 // 侧边栏相关JS
 $("#sidebar-close img").click(function () {
     $(".right-sidebar").fadeOut();
+    $('.secondary-sidebar').hide();
 })
 $("#right-sidebar-ico").click(function () {
     $(".right-sidebar").fadeIn();
 })
 
-// 鼠标滑过时显示相应的导航栏
-$(".main-sidebar a:eq(0)").hover(function (e) {
-    getText(e);
-        // 显示子导航栏
-        $('.secondary-sidebar').show();
-        // 删除所有子元素
-        $('.secondary-button-group').empty();
-        $('.secondary-button-group').append(secondary_sidebar_project);
-    },
-    function () {
-        // 离开时隐藏
-        $('.secondary-sidebar').hide();
-    })
-$(".main-sidebar a:eq(1)").hover(function () {
-        // 显示子导航栏
-        $('.secondary-sidebar').show();
-        // 删除所有子元素
-        $('.secondary-button-group').empty();
-        $('.secondary-button-group').append(secondary_sidebar_strategy);
-    },
-    function () {
-        // 离开时隐藏
-        $('.secondary-sidebar').hide();
-    })
-$(".main-sidebar a:eq(2)").hover(function () {
-        // 显示子导航栏
-        $('.secondary-sidebar').show();
-        // 删除所有子元素
-        $('.secondary-button-group').empty();
-        $('.secondary-button-group').append(secondary_sidebar_presentation);
-    },
-    function () {
-        // 离开时隐藏
-        $('.secondary-sidebar').hide();
-    })
-$(".main-sidebar a:eq(3)").hover(function () {
-        // 显示子导航栏
-        $('.secondary-sidebar').show();
-        // 删除所有子元素
-        $('.secondary-button-group').empty();
-        $('.secondary-button-group').append(secondary_sidebar_product);
-    },
-    function () {
-        // 离开时隐藏
-        $('.secondary-sidebar').hide();
-    }
-)
-// 获取元素文本
-function getText(e){
-    console.log(e);
-    console.log($(e.currentTarget).innerText);
-}
+let secondary_sidebar =
+    `
+    {{~it:value:index}}
+        <div class="secondary-button">
+            <a href="{{=value.link}}">{{=value.name}}</a>
+        </div>
+    {{~}}
+    `;
 
+// 鼠标滑过时显示相应的导航栏
+$(".main-sidebar a").hover(function (e) {
+        // 显示子导航栏
+        $('.secondary-sidebar').show();
+        let type_name = e.currentTarget.innerText;
+        for(let i=0; i<data.length; i++){
+            if(data[i].name == type_name){
+                // console.log(data[i]);
+                let html = doT.template(secondary_sidebar)(data[i].subType);
+                // console.log(html);
+                // 删除添加子元素
+                $('.secondary-button-group').append(html);
+            }
+        }
+    },
+    function () {
+        // $('.secondary-button-group').empty();
+        // 离开时隐藏
+        // $('.secondary-sidebar').hide();
+    })
+// $(".main-sidebar").mouseenter(function () {
+//     $('.secondary-sidebar').hide();
+// })
 
