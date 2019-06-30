@@ -26,6 +26,9 @@ body{
     top: 0;
     display: inline-block;
 }
+.main-box:hover{
+    cursor:pointer;
+}
 .main-box img{
     width: 11.06rem;
     height: 7.582rem;
@@ -69,16 +72,20 @@ body{
 }
 .sub-box-group{
     height: 7.582rem;
-    width: 4.56rem;
+    width: 4.65rem;
     position: absolute;
     right: 1.6rem;
-    overflow:auto;
+    overflow-y:auto;
+    overflow-x: hidden;
 }
 .sub-box{
     display: inline-block;
     font-size: 0;
     height: 2.85rem;
     width: 4.14rem;
+}
+.sub-box{
+    cursor:pointer;
 }
 .sub-box img{
     height: 2.84rem;
@@ -94,7 +101,7 @@ body{
 }
 .sub-black-screen .sub-image-title{
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 0.3rem;
     transform: translateY(-50%);
@@ -103,12 +110,13 @@ body{
 }
 .sub-black-screen .sub-image-ico{
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: 50%;
-    left: 2.3rem;
+    right: 0.2rem;
     transform: translateY(-50%);
 }
 .sub-black-screen .sub-image-ico img{
+    display: inline-block;
     width: 0.43rem;
     height: 0.18rem;
 }

@@ -21,35 +21,25 @@
 
     <!-- 大图 -->
     <div class="main-box">
-        <img src="../static/images/details-page-images/presentation-images/aerial-view.png" alt="鸟瞰图">
-        <!-- 幕布 -->
-        <div class="black-screen" style="visibility: hidden;">
-            <div class="image-title">鸟瞰图</div>
-            <div class="image-ico">
-                <img src="../static/images/list-page-images/arrowIco.png">
-            </div>
-        </div>
-    </div>
-
-    <!-- 小图 -->
-    <div class="sub-box-group">
-<!--        <div class="sub-box">-->
-<!--            <img src="../static/images/details-page-images/presentation-images/aerial-view.png" alt="鸟瞰图2">-->
-<!--            &lt;!&ndash; 幕布 &ndash;&gt;-->
-<!--            <div class="sub-black-screen" style="visibility: hidden">-->
-<!--                <div class="sub-image-title">鸟瞰图2</div>-->
-<!--                <div class="sub-image-ico">-->
-<!--                    <img src="../static/images/list-page-images/arrowIco.png">-->
-<!--                </div>-->
+<!--        <img src="../static/images/details-page-images/presentation-images/aerial-view.png" alt="鸟瞰图">-->
+<!--        &lt;!&ndash; 幕布 &ndash;&gt;-->
+<!--        <div class="black-screen" style="visibility: hidden;">-->
+<!--            <div class="image-title">鸟瞰图</div>-->
+<!--            <div class="image-ico">-->
+<!--                <img src="../static/images/list-page-images/arrowIco.png">-->
 <!--            </div>-->
 <!--        </div>-->
     </div>
 
-    <!-- 模板渲染 -->
+    <!-- 小图 -->
+    <div class="sub-box-group">
+    </div>
+
+    <!-- 小图模板渲染 -->
     <script type="text/x-dot-template" id="sub-box">
             {{~it:item:index}}
             <div class="sub-box">
-                <img src="{{=item.image_path}}" alt="{{=item.name}}">
+                <img src="{{=item.image_path[0]}}" alt="{{=item.name}}" link="{{=item.link}}">
                 <!-- 幕布 -->
                 <div class="sub-black-screen" style="visibility: hidden">
                     <div class="sub-image-title">{{=item.name}}</div>
@@ -59,6 +49,17 @@
                 </div>
             </div>
             {{~}}
+    </script>
+    <!-- 大图模板渲染 -->
+    <script type="text/x-dot-template" id="main-box-script">
+        <img src="{{=it.image_path[0]}}" alt="{{=it.name}}" link="{{=it.link}}">
+        <!-- 幕布 -->
+        <div class="black-screen" style="visibility: hidden;">
+            <div class="image-title">{{=it.name}}</div>
+            <div class="image-ico">
+                <img src="../static/images/list-page-images/arrowIco.png">
+            </div>
+        </div>
     </script>
 
 </div>
