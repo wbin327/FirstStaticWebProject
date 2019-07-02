@@ -284,3 +284,8 @@ $(".display-content img").click(function (e) {
     window.location.href = link;
    // debugger
 })
+
+// 将右方导航栏下移
+$(document).ready(function () {
+    $(".right-sidebar-ico img").css({'top': '0.6rem'});
+})

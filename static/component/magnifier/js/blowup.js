@@ -87,6 +87,8 @@ $(function ($) {
      
       // Zoomed image coordinates ， 这里获取的鼠标位置是相对于DIV的位置，并不是相对于浏览器的位置，
       // 所以需要加上DIV到顶部以及DIV到左边的距离
+      console.log("NATIVE_IMG:", NATIVE_IMG.height, NATIVE_IMG.width);
+      console.log("$element:", $element.width(), $element.height() );
       var zoomX = -Math.floor(relX / $element.width() * NATIVE_IMG.width - $options.width / 2) + 460;
       var zoomY = -Math.floor(relY / $element.height() * NATIVE_IMG.height - $options.height / 2) + 135;
 

@@ -282,3 +282,5 @@ $("#video-close").click(function () {
     player.pause();
     $("#video-group").hide();
 })
+
+//

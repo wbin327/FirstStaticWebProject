@@ -104,12 +104,15 @@ a{
     box-sizing:border-box;
     -moz-box-sizing:border-box; /* Firefox */
     -webkit-box-sizing:border-box; /* Safari */
+    color: #999999;
+    /*font-family: STSong;*/
 }
 .footer-navigation-content a:hover{
     /* 下面实现鼠标滑动效果 */
     background: rgba(190, 15, 15, 0.4);
     cursor:pointer;
     border-bottom: 8px solid red;
+    color: #fff;
 }
 .footer-navigation-content-group{
     height: auto;
@@ -126,7 +129,6 @@ a{
 }
 
 .footer-navigation-content-word{
-    color: #999999;
     margin-top: 0.18rem;
 }
 
