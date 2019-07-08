@@ -61,10 +61,14 @@ body{
 }
 .black-screen .image-ico{
     display: inline-block;
-    position: relative;
-    left: 8.7rem;
+    /*position: relative;*/
+    /*left: 8.7rem;*/
+    position: absolute;
+    right: 0.2rem;
     top: 50%;
     transform: translateY(-50%);
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
 }
 .black-screen .image-ico img{
     width: 0.43rem;
