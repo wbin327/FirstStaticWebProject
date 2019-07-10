@@ -289,3 +289,15 @@ $(".display-content img").click(function (e) {
 $(document).ready(function () {
     $(".right-sidebar-ico img").css({'top': '0.6rem'});
 })
+
+// 幕布点击事件
+$(".black-screen").click(function (e) {
+    let link = e.currentTarget.getAttribute("link");
+    // 页面跳转
+    window.location.href = link;
+})
+$(".sub-black-screen").click(function (e) {
+    let link = e.currentTarget.getAttribute("link");
+    // 页面跳转
+    window.location.href = link;
+})
