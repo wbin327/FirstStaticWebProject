@@ -81,3 +81,49 @@
 .return-ico{
     cursor: pointer;
 }
+
+/*全屏幕布*/
+.black-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    text-align: center;
+}
+.black-screen .main-img{
+    height: 100%;
+    width: auto;
+}
+.black-screen .left-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.5rem;
+    /*background: rgba(255, 255, 255, 0.3);*/
+    background: #000;
+    cursor: pointer;
+}
+.black-screen .left-box img{
+    position: relative;
+    top: 40%;
+    width: 30%;
+    height: auto;
+}
+.black-screen .right-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.5rem;
+    background: #000;
+    cursor: pointer;
+}
+.black-screen .right-box img{
+    position: relative;
+    top: 40%;
+    width: 30%;
+    height: auto;
+}

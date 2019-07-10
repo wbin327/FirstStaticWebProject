@@ -47,10 +47,6 @@ css.attr({
 
 // 点击返回按钮
 $("header img").click(function () {
-    //window.location.href = "/FirstStaticWebProject/";
-    // window.location.href = "/";
-    // 返回上一页
-    // window.history.back();
     //获取当前窗口的路径
     let pathname = window.location.pathname;
     let i;
@@ -59,7 +55,6 @@ $("header img").click(function () {
             break;
         }
     }
-    console.log(i);
     let subTitle = getUrlPara('subTitle');
     switch (i) {
         case 1:
