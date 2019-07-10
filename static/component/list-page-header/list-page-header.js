@@ -45,10 +45,28 @@ css.attr({
     href: "{baseUrl}/static/component/list-page-header/css/list-page-header.css".format({'baseUrl': baseUrl}),
 });
 
-// 点击返回按钮返回主页
+// 点击返回按钮
 $("header img").click(function () {
     //window.location.href = "/FirstStaticWebProject/";
     // window.location.href = "/";
     // 返回上一页
-    window.history.back();
+    // window.history.back();
+    //获取当前窗口的路径
+    let pathname = window.location.pathname;
+    let i;
+    for(i=0; i<linkTree.length; i++){
+        if(pathname === linkTree[i]){
+            break;
+        }
+    }
+    console.log(i);
+    let subTitle = getUrlPara('subTitle');
+    switch (i) {
+        case 1:
+            window.location.href = `${linkTree[0]}`
+            break;
+        case 2:
+            window.location.href = `${linkTree[1]}?subTitle=${subTitle}`
+            break;
+    }
 })
