@@ -1,6 +1,6 @@
 
 let header_html =
-    '    <img src="{baseUrl}/static/component/list-page-header/images/return-ico.png">\n' +
+    '    <img src="{baseUrl}/static/component/header/images/return-ico.png">\n' +
     '    <div class="title">\n' +
     '        浏阳（长沙东）碧桂园高尔夫花园方案\n' +
     '    </div>\n' +
@@ -42,7 +42,7 @@ css.attr({
     rel: "stylesheet",
     type: "text/css",
     // href: "/static/component/right-sidebar/css/right-sidebar.css",
-    href: "{baseUrl}/static/component/list-page-header/css/list-page-header.css".format({'baseUrl': baseUrl}),
+    href: "{baseUrl}/static/component/header/css/header.css".format({'baseUrl': baseUrl}),
 });
 
 // 点击返回按钮
