@@ -28,29 +28,33 @@
     <!-- 小图模板渲染 -->
     <script type="text/x-dot-template" id="sub-box">
             {{~it:item:index}}
+            {{? 'imagesPath' in item}}
             <div class="sub-box">
-                <img src="{{=item.image_path[0]}}" alt="{{=item.name}}" link="{{=item.link}}">
+                <img src="{{=item.imagesPath[0]}}" alt="{{=item.nodeName}}" link="{{=item.link}}">
                 <!-- 幕布 -->
                 <div class="sub-black-screen" style="visibility: hidden" link="{{=item.link}}">
-                    <div class="sub-image-title">{{=item.name}}</div>
+                    <div class="sub-image-title">{{=item.nodeName}}</div>
                     <div class="sub-image-ico">
                         <img src="../static/images/list-page-images/arrowIco.png">
                     </div>
                 </div>
             </div>
+            {{? }}
             {{~}}
     </script>
     <!-- 大图模板渲染 -->
     <script type="text/x-dot-template" id="main-box-script">
-        <img src="{{=it.image_path[0]}}" alt="{{=it.name}}" link="{{=it.link}}">
+        {{? 'imagesPath' in it}}
+        <img src="{{=it.imagesPath[0]}}" alt="{{=it.nodeName}}" link="{{=it.link}}">
         <!-- 幕布 -->
         <div class="black-screen" style="visibility: hidden;" link="{{=it.link}}">
 <!--        <div class="black-screen">-->
-            <div class="image-title">{{=it.name}}</div>
+            <div class="image-title">{{=it.nodeName}}</div>
             <div class="image-ico">
                 <img src="../static/images/list-page-images/arrowIco.png">
             </div>
         </div>
+        {{? }}
     </script>
 
 </div>

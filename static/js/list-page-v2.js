@@ -234,14 +234,14 @@ render_page();
 
 function render_page(){
     // 根据相应的subTitle类型，渲染相应的页面
-    let subTitle1 = getUrlPara('subTitle');
-    let page_data = get_data(subTitle1);
-    let main_box_html = doT.template($("#main-box-script").html())(page_data.subType[0]);
-    let sub_box_html = doT.template($("#sub-box").html())(page_data.subType.slice(1));
-    // console.log(main_box_html);
-    // console.log(sub_box_html);
-    $(".sub-box-group").html(sub_box_html);
+    let typeIndex = parseInt(getUrlPara('typeIndex'));
+    let sessionStorageData = sessionStorage.getItem("user_data");
+    let page_data = JSON.parse(sessionStorageData).types[typeIndex].children
+    let main_box_html = doT.template($("#main-box-script").html())(page_data[0]);
     $(".main-box").html(main_box_html);
+    let sub_box_html = doT.template($("#sub-box").html())(page_data.slice(1));
+    $(".sub-box-group").html(sub_box_html);
+
 }
 function get_data(subTitle){
     let result = '';

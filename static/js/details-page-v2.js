@@ -231,8 +231,9 @@ details_page_data = details_page_data.format({'baseUrl': baseUrl});
 details_page_data = JSON.parse(details_page_data);
 // debugger
 let image_list = [];
-let subTitle = getUrlPara('subTitle');
-let image_index = getUrlPara('image_index');
+// let subTitle = getUrlPara('subTitle');
+let typeIndex = getUrlPara('typeIndex');
+let image_index = parseInt(getUrlPara('image_index'));
 if(image_index == null){
     image_index = 0;
 }
@@ -241,23 +242,12 @@ render_page();
 // 修改页面内容
 function render_page() {
     // 设置图片数据集合
-    set_image_list();
+    image_list = JSON.parse(sessionStorage.getItem("image_list"))
     // 页面显示相应的图片
     edit_image();
-    // 是否需要隐藏按虐
+    // 是否需要隐藏按钮
     show_or_hide_button();
     // console.log(image_list);
-}
-function set_image_list(){
-    for(let i=0;i<details_page_data.all_type.length; i++){
-        if(details_page_data.all_type[i].name == subTitle){
-            for(let j=0; j<details_page_data.all_type[i].subType.length; j++){
-                for(let k=0; k<details_page_data.all_type[i].subType[j].image_path.length; k++){
-                    image_list.push(details_page_data.all_type[i].subType[j].image_path[k]);
-                }
-            }
-        }
-    }
 }
 function edit_image(){
     $(".image-box img").attr('src', image_list[image_index]);
@@ -381,6 +371,7 @@ $(document).ready(function () {
 
 // 返回按钮
 $(".return-ico").click(function () {
+    let projectId = getUrlPara('projectId');
     //获取当前窗口的路径
     let pathname = window.location.pathname;
     let i;
@@ -389,13 +380,12 @@ $(".return-ico").click(function () {
             break;
         }
     }
-    let subTitle = getUrlPara('subTitle');
     switch (i) {
         case 1:
-            window.location.href = `${linkTree[0]}`
+            window.location.href = `${linkTree[0]}?projectId=${projectId}`
             break;
         case 2:
-            window.location.href = `${linkTree[1]}?subTitle=${subTitle}`
+            window.location.href = `${linkTree[1]}?typeIndex=${typeIndex}&projectId=${projectId}`
             break;
     }
 })
