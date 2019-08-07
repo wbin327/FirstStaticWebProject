@@ -297,14 +297,20 @@ function constructionLink(jsonStr, projectId) {
 // 渲染页面主体内容
 function render_main(data) {
     // 添加logo
-    let img = `<img src="${data.company_logo}">`;
-    $(".company-logo").append(img);
+    if('company_logo' in data){
+        let img = `<img src="${data.company_logo}">`;
+        $(".company-logo").append(img);
+    }
     // 添加项目信息
-    let projectMsg = `<img src="${data.project_introduction}">`
-    $(".project-msg").append(projectMsg)
+    if('project_introduction' in data){
+        let projectMsg = `<img src="${data.project_introduction}">`
+        $(".project-msg").append(projectMsg)
+    }
     // 添加背景图片
-    let backgroundImg = `<img src="${data.background_image}">`
-    $(".background-image").append(backgroundImg);
+    if('background_image' in data){
+        let backgroundImg = `<img src="${data.background_image}">`
+        $(".background-image").append(backgroundImg);
+    }
 }
 // 渲染底部导航栏
 function render_footer(data){
@@ -319,10 +325,12 @@ function render_footer(data){
 // 渲染video
 function render_video(data){
     // 渲染页面
-    let video_html = doT.template($("#video-script").html())(data);
-    $("body").append(video_html);
-    // 必须先将元素添加到body中再执行以下js,否则会无法渲染video
-    $.getScript(`${baseUrl}/static/js/render-video.js`)
+    if('video' in data){
+        let video_html = doT.template($("#video-script").html())(data);
+        $("body").append(video_html);
+        // 必须先将元素添加到body中再执行以下js,否则会无法渲染video
+        $.getScript(`${baseUrl}/static/js/render-video.js`)
+    }
 }
 
 // 视频播放相关JS
