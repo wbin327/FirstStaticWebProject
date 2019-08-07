@@ -15,17 +15,17 @@ let user_data =
             "children": [
                 {
                     "nodeName": "项目背景",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=项目背景&image_index=0",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=0&image_index=0",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images//project-images/project-background.png"]
                 },
                 {
                     "nodeName": "区位分析",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=项目背景&image_index=1",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=0&image_index=1",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images//project-images/location-analysis.png"]
                 },
                 {
                     "nodeName": "周边现状",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=项目背景&image_index=2",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=0&image_index=2",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images//project-images/around-analysis.png"]
                 }
             ]
@@ -37,12 +37,12 @@ let user_data =
             "children": [
                 {
                     "nodeName": "高尔夫精神",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计策略&image_index=0",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=1&image_index=0",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/strategy-images/golf-spirit.png"]
                 },
                 {
                     "nodeName": "绿色家园（多）",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计策略&image_index=1",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=1&image_index=1",
                     "imagesPath": [
                         "{baseUrl}/static/images/details-page-images/strategy-images/green-home1.png",
                         "{baseUrl}/static/images/details-page-images/strategy-images/green-home2.png"
@@ -50,7 +50,7 @@ let user_data =
                 },
                 {
                     "nodeName": "生态修复",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计策略&image_index=3",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=1&image_index=3",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/strategy-images/ecology-repaired1.png"]
                 }
             ]
@@ -62,27 +62,27 @@ let user_data =
             "children": [
                 {
                     "nodeName": "鸟瞰图",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=0",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=0",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/aerial-view.png"]
                 },
                 {
                     "nodeName": "平台透视图",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=1",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=1",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/perspective.png"]
                 },
                 {
                     "nodeName": "平台半鸟瞰图",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=2",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=2",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/binary-aerial-view.png"]
                 },
                 {
                     "nodeName": "整体鸟瞰图",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=3",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=3",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/general-aerial-view.png"]
                 },
                 {
                     "nodeName": "规划总平面（多）",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=4",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=4",
                     "imagesPath": [
                         "{baseUrl}/static/images/details-page-images/presentation-images/master-plan1.png",
                         "{baseUrl}/static/images/details-page-images/presentation-images/master-plan2.png"
@@ -90,47 +90,47 @@ let user_data =
                 },
                 {
                     "nodeName": "指标表",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=6",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=6",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/ksslzb.png"]
                 },
                 {
                     "nodeName": "B区放大总平面",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=7",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=7",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/b-size.png"]
                 },
                 {
                     "nodeName": "分期规划",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=8",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=8",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/stage-planning.png"]
                 },
                 {
                     "nodeName": "围合院落",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=9",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=9",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/yard.png"]
                 },
                 {
                     "nodeName": "土方节省",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=10",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=10",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/save.png"]
                 },
                 {
                     "nodeName": "设计核心",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=11",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=11",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/design.png"]
                 },
                 {
                     "nodeName": "户型分析",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=12",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=12",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/apartment.png"]
                 },
                 {
                     "nodeName": "采光同风",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=13",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=13",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/lighting.png"]
                 },
                 {
                     "nodeName": "回归生活（多）",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=14",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=14",
                     "imagesPath": [
                         "{baseUrl}/static/images/details-page-images/presentation-images/life1.png",
                         "{baseUrl}/static/images/details-page-images/presentation-images/life2.png",
@@ -140,17 +140,17 @@ let user_data =
                 },
                 {
                     "nodeName": "产品参数",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=18",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=18",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/product.png"]
                 },
                 {
                     "nodeName": "功能分析图",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=19",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=19",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/function-analysis.png"]
                 },
                 {
                     "nodeName": "景观分析",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=20",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=2&image_index=20",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/presentation-images/landcape-analysis.png"]
                 }
             ]
@@ -162,17 +162,17 @@ let user_data =
             "children": [
                 {
                     "nodeName": "别墅共性优点",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=0",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=0",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/product-images/same-advantage.png"]
                 },
                 {
                     "nodeName": "独栋A型",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=1",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=1",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/product-images/a-type.png"]
                 },
                 {
                     "nodeName": "独栋B型（多）",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=2",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=2",
                     "imagesPath": [
                         "{baseUrl}/static/images/details-page-images/product-images/b-type1.png",
                         "{baseUrl}/static/images/details-page-images/product-images/b-type2.png"
@@ -180,7 +180,7 @@ let user_data =
                 },
                 {
                     "nodeName": "独栋C型（多）",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=4",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=4",
                     "imagesPath": [
                         "{baseUrl}/static/images/details-page-images/product-images/c-type1.png",
                         "{baseUrl}/static/images/details-page-images/product-images/c-type2.png"
@@ -188,12 +188,12 @@ let user_data =
                 },
                 {
                     "nodeName": "独栋别墅优点",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=6",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=6",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/product-images/single-advantage.png"]
                 },
                 {
                     "nodeName": "叠拼别墅（多）",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=7",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=7",
                     "imagesPath": [
                         "{baseUrl}/static/images/details-page-images/product-images/diepin1.png",
                         "{baseUrl}/static/images/details-page-images/product-images/diepin2.png",
@@ -203,12 +203,12 @@ let user_data =
                 },
                 {
                     "nodeName": "叠拼别墅优点",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=11",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=11",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/product-images/diepin-advantage.png"]
                 },
                 {
                     "nodeName": "联排别墅（多）",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=12",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=12",
                     "imagesPath": [
                         "{baseUrl}/static/images/details-page-images/product-images/townhouse1.png",
                         "{baseUrl}/static/images/details-page-images/product-images/townhouse2.png",
@@ -219,7 +219,7 @@ let user_data =
                 },
                 {
                     "nodeName": "联排别墅优点",
-                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=产品图纸&image_index=17",
+                    "link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=3&image_index=17",
                     "imagesPath": ["{baseUrl}/static/images/details-page-images/product-images/townhouse-advantage.png"]
                 }
             ]
@@ -265,6 +265,7 @@ function getSetData(){
         })
     }else{
         data = user_data.format({'baseUrl': baseUrl});
+        constructionLink(data, projectId);
     }
     // 保存数据到sessionStorage中,key-value形式
     sessionStorage.setItem("user_data", data);
@@ -276,24 +277,27 @@ function constructionLink(jsonStr, projectId) {
     let imageList = [];
     let jsonData = JSON.parse(jsonStr);
     for(let i=0; i<jsonData.types.length; i++){
-        let image_index = 0;
-        // 顶级类的链接，格式如下："link": "{baseUrl}/list-page-v2/list-page-v2.html?typeIndex=项目背景",
+        let typeImageList = [];
+        // 顶级类的链接，格式如下："link": "{baseUrl}/list-page-v2/list-page-v2.html?typeIndex=0",
         jsonData.types[i]['link'] = `${baseUrl}/list-page-v2/list-page-v2.html?typeIndex=${i}&projectId=${projectId}`;
         // 将所有图片放入imageList集合中
         for(let j=0; j<jsonData.types[i].children.length; j++){
+            let image_index = 0;
             if('imagesPath' in jsonData.types[i].children[j]){
-                // 第二级类别的链接，格式如下"link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=设计成果&image_index=0&projectId",
+                // 第二级类别的链接，格式如下"link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=0&image_index=0&projectId",
                 jsonData.types[i].children[j]['link'] = `${baseUrl}/details-page/details-page-v2.html?typeIndex=${i}&projectId=${projectId}&image_index=${image_index}`
                 for(let k=0; k<jsonData.types[i].children[j].imagesPath.length; k++){
                     image_index ++;
-                    imageList.push(jsonData.types[i].children[j].imagesPath[k]);
+                    typeImageList.push(jsonData.types[i].children[j].imagesPath[k]);
                 }
             }
         }
+        imageList.push(typeImageList);
     }
     sessionStorage.setItem("image_list", JSON.stringify(imageList));
     return JSON.stringify(jsonData);
 }
+
 // 渲染页面主体内容
 function render_main(data) {
     // 添加logo

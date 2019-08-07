@@ -24,7 +24,7 @@ a{
     right: 0;
     bottom: 0;
     width: 6.3rem;
-
+    z-index: 999;
 }
 .main-sidebar{
     width: 52.54%;

@@ -54,17 +54,13 @@ $("header img").click(function () {
     //获取当前窗口的路径
     let pathname = window.location.pathname;
     let i;
-    for(i=0; i<linkTree.length; i++){
-        if(pathname === linkTree[i]){
-            break;
-        }
-    }
+    i = pathname.substring(pathname.lastIndexOf("/")+1) === 'details-page-v2.html' ? 2 : 1
     switch (i) {
         case 1:
-            window.location.href = `${linkTree[0]}?projectId=${projectId}`
+            window.location.href = projectId ? `${linkTree[0]}?projectId=${projectId}` : `${linkTree[0]}`
             break;
         case 2:
-            window.location.href = `${linkTree[1]}?typeIndex=${typeIndex}&projectId=${projectId}`
+            window.location.href = projectId ? `${linkTree[1]}?typeIndex=${typeIndex}&projectId=${projectId}` : `${linkTree[1]}?typeIndex=${typeIndex}`
             break;
     }
 })
