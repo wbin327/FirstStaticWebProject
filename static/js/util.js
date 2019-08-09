@@ -14,7 +14,7 @@ function getUrlPara(paraName){
         }
     }
     else{
-        return "";
+        return null;
     }
 }
 

@@ -265,7 +265,7 @@ function getSetData(){
         })
     }else{
         data = user_data.format({'baseUrl': baseUrl});
-        constructionLink(data, projectId);
+        constructionLink(data);
     }
     // 保存数据到sessionStorage中,key-value形式
     sessionStorage.setItem("user_data", data);
@@ -279,13 +279,22 @@ function constructionLink(jsonStr, projectId) {
     for(let i=0; i<jsonData.types.length; i++){
         let typeImageList = [];
         // 顶级类的链接，格式如下："link": "{baseUrl}/list-page-v2/list-page-v2.html?typeIndex=0",
-        jsonData.types[i]['link'] = `${baseUrl}/list-page-v2/list-page-v2.html?typeIndex=${i}&projectId=${projectId}`;
+        if(projectId){
+            jsonData.types[i]['link'] = `${baseUrl}/list-page-v2/list-page-v2.html?typeIndex=${i}&projectId=${projectId}`;
+        }else{
+            jsonData.types[i]['link'] = `${baseUrl}/list-page-v2/list-page-v2.html?typeIndex=${i}`;
+        }
         // 将所有图片放入imageList集合中
         for(let j=0; j<jsonData.types[i].children.length; j++){
             let image_index = 0;
             if('imagesPath' in jsonData.types[i].children[j]){
                 // 第二级类别的链接，格式如下"link": "{baseUrl}/details-page/details-page-v2.html?typeIndex=0&image_index=0&projectId",
-                jsonData.types[i].children[j]['link'] = `${baseUrl}/details-page/details-page-v2.html?typeIndex=${i}&projectId=${projectId}&image_index=${image_index}`
+                if(projectId){
+                    jsonData.types[i].children[j]['link'] = `${baseUrl}/details-page/details-page-v2.html?typeIndex=${i}&projectId=${projectId}&image_index=${image_index}`
+                }else{
+                    jsonData.types[i].children[j]['link'] = `${baseUrl}/details-page/details-page-v2.html?typeIndex=${i}&image_index=${image_index}`
+
+                }
                 for(let k=0; k<jsonData.types[i].children[j].imagesPath.length; k++){
                     image_index ++;
                     typeImageList.push(jsonData.types[i].children[j].imagesPath[k]);
