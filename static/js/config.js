@@ -1,5 +1,6 @@
 // 项目根路径
-let baseUrl = '/'
+// let baseUrl = '/'
+let baseUrl = 'http://114.215.188.153:8000/'
 // let baseUrl = 'http://10.5.2.54:8000/'
 // let baseUrl = '/GolfGardenProject/'
 // let requestUrl = 'http://localhost:8088/'
