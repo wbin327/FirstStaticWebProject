@@ -1,9 +1,9 @@
 // 项目根路径
-// let baseUrl = '/'
-let baseUrl = 'http://10.5.2.54:8000/'
+let baseUrl = '/'
+// let baseUrl = 'http://10.5.2.54:8000/'
 // let baseUrl = '/GolfGardenProject/'
 // let requestUrl = 'http://localhost:8088/'
-let requestUrl = 'http://10.5.2.54:8088/'
+let requestUrl = 'http://114.215.188.153:8088/'
 
 // 详情页图片请求路径配置
 let details_page_images_path = baseUrl + '/static/images/details-page-images/'
