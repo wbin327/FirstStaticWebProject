@@ -1,6 +1,7 @@
 // 项目根路径
 // let baseUrl = '/'
-let baseUrl = 'http://114.215.188.153:8000/'
+// let baseUrl = 'http://114.215.188.153:8000/'
+let baseUrl = 'http://arcc.com.cn:8000/'
 // let baseUrl = 'http://10.5.2.54:8000/'
 // let baseUrl = '/GolfGardenProject/'
 // let baseUrl = 'http://10.5.2.54:8000/'
