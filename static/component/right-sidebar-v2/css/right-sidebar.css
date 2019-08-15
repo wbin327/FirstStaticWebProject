@@ -13,6 +13,7 @@ a{
     /*width: 0.4rem;*/
     height: 0.2rem;
     width: 0.32rem;
+    z-index: 999;
 }
 .right-sidebar-ico img:hover{
     cursor:pointer;
@@ -60,6 +61,9 @@ a{
 .sidebar-logo img{
     height: 0.47rem;
     width: 2.35rem;
+}
+.sidebar-logo img:hover{
+    cursor:pointer;
 }
 .main-sidebar-button{
     width: 100%;

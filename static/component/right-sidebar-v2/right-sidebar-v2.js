@@ -91,3 +91,7 @@ $(".main-sidebar a").hover(function (e) {
 //     $('.secondary-sidebar').hide();
 // })
 
+// 侧边栏LOGO跳转首页
+$(".sidebar-logo").click(function () {
+    window.location.href = linkTree[0]
+})
