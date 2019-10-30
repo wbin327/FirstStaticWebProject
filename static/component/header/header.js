@@ -9,7 +9,7 @@ let header_html =
     '    </div>'
 
 // 页面渲染
-let pageData = JSON.parse(sessionStorage.getItem('user_data'))
+let pageData = JSON.parse(localStorage.getItem('user_data'))
 let typeIndex = parseInt(getUrlPara("typeIndex"));
 let subTitle = pageData.types[typeIndex].nodeName
 render()

@@ -11,7 +11,7 @@ render_page();
 // 修改页面内容
 function render_page() {
     // 设置图片数据集合
-    image_list = JSON.parse(sessionStorage.getItem("image_list"))[typeIndex]
+    image_list = JSON.parse(localStorage.getItem("image_list"))[typeIndex]
     // 页面显示相应的图片
     edit_image();
     // 是否需要隐藏按钮

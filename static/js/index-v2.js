@@ -268,7 +268,7 @@ function getSetData(){
         constructionLink(data);
     }
     // 保存数据到sessionStorage中,key-value形式
-    sessionStorage.setItem("user_data", data);
+    localStorage.setItem("user_data", data);
     return data;
 }
 
@@ -303,7 +303,7 @@ function constructionLink(jsonStr, projectId) {
         }
         imageList.push(typeImageList);
     }
-    sessionStorage.setItem("image_list", JSON.stringify(imageList));
+    localStorage.setItem("image_list", JSON.stringify(imageList));
     return JSON.stringify(jsonData);
 }
 
